@@ -1,0 +1,4 @@
+
+1) Titulo de la nota: ### property="og:title" content
+
+2) Comienzo del texto: ### p class="primero"
