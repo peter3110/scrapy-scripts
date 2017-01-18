@@ -10,5 +10,7 @@ import scrapy
 
 class ArticuloEconomia(scrapy.Item):
 
-	articulo = scrapy.Field()
-
+	categoria = scrapy.Field()
+	titulo = scrapy.Field()
+	texto = scrapy.Field()
+	dia = scrapy.Field()
