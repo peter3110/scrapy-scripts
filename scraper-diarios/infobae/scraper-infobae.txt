@@ -1,0 +1,6 @@
+
+1) links: 
+	<a href="/sociedad/2017/01/27/ordenaron-detener-al-conductor-que-provoco-el-choque-que-mato-a-la-maestra/" data-pb-field="headlines.basic" data-pb-url-field="canonical_url" data-pb-placeholder="Write headline here">
+
+2) parrafos de cada articulo: 
+	<p class="element element-paragraph" ... etc.

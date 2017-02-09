@@ -68,13 +68,15 @@ class QuotesSpider(scrapy.Spider):
     def parse(self, response, cat):
 
         # Levanto los datos del articulo actual
-        dia       = date.today()
+        fecha     = date.today()
         categoria = cat
         titulo    = response.xpath('//title').extract()
-        texto     = response.xpath('//p[@class="primero"]').extract()
+        # TODO: MEJORAR ESTO
+        #texto     = response.xpath('//p[@class="primero"]').extract()
+        texto     = response.xpath('//p').extract()
         
         # Guardo el articulo de la pagina actual
-        yield ArticuloEconomia(dia = dia, categoria = categoria, titulo = titulo, texto=texto)
+        yield ArticuloEconomia(dia = fecha, categoria = categoria, titulo = titulo, texto=texto)
 
         # Si es una pagina que tiene links a otras notas, voy a recorrer esas notas
         for url in response.xpath('//a[@class="f-linkNota"]/@href').extract():
