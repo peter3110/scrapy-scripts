@@ -1,10 +1,12 @@
 
+import sys
 import re
 import json
 import os
 import unicodedata
 import string
 
+filename = sys.argv[1] # nombre del archivo a procesar
 
 def remove_accents(data):
     return unicodedata.normalize('NFD', data).encode('ASCII', 'ignore')
@@ -17,7 +19,6 @@ def cleanhtml(raw_html):
 def cleantitle(title):
 	return re.split('-',title)[0]
 
-filename = '2017-01-23.json'
 with open(filename, 'r+') as input_file:
 	with open('v2-'+filename, 'w') as output_file:
     

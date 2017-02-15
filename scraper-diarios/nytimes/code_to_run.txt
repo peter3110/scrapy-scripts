@@ -1,0 +1,1 @@
+scrapy crawl buscador_spider -o data/busquedasTrump.json

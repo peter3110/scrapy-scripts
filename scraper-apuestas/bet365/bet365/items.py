@@ -8,9 +8,7 @@
 import scrapy
 
 
-class ArticuloEconomia(scrapy.Item):
-
-	categoria = scrapy.Field()
-	titulo = scrapy.Field()
-	texto = scrapy.Field()
-	dia = scrapy.Field()
+class Bet365Item(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    pass

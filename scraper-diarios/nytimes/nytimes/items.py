@@ -8,9 +8,9 @@
 import scrapy
 
 
-class ArticuloEconomia(scrapy.Item):
+class nytimesArticle(scrapy.Item):
 
-	categoria = scrapy.Field()
-	titulo = scrapy.Field()
-	texto = scrapy.Field()
-	dia = scrapy.Field()
+    category = scrapy.Field()
+    title = scrapy.Field()
+    text = scrapy.Field()
+    date = scrapy.Field()

@@ -1,0 +1,1 @@
+scrapy crawl articulos_spider -o data/{YYYY/MM/DD}.json
