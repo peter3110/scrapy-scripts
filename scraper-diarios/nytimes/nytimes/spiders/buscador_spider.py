@@ -17,11 +17,20 @@ class QuotesSpider(scrapy.Spider):
 
     search = 'trump'
     waiting_time = 10
-    n_pages = 10
+    n_pages = 5
 
-    init = 'https://query.nytimes.com/search/sitesearch/?action=click&contentCollection&region=TopBar&WT.nav=searchWidget&module=SearchSubmit&pgtype=Homepage#/trump/since1851/allresults/'
-    start_urls = [
+    #init = 'https://query.nytimes.com/search/sitesearch/?action=click&contentCollection&region=TopBar&WT.nav=searchWidget&module=SearchSubmit&pgtype=Homepage#/trump/since1851/allresults/'
+    '''start_urls = [
         init + str(i) + '/' 
+        for i in range(1, n_pages)
+    ]'''
+
+    init = 'https://query.nytimes.com/search/sitesearch/?action=click&contentCollection&region=TopBar&WT.nav=' + \
+           'searchWidget&module=SearchSubmit&pgtype=Homepage#/trump/' + \
+           'from' + '2016' + '07' + '28' + 'to' + '2016' + '11' + '08'
+
+    start_urls = [
+        init + '/allresults/' + str(i) + '/allauthors/oldest/' 
         for i in range(1, n_pages)
     ]
 
