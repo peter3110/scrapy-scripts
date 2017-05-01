@@ -26,11 +26,14 @@ with open(filename, 'r+') as input_file:
 		new_data = []
 
 		for row in data:
-			new_row = {"titulo": "", "texto": ""}
+			new_row = {"titulo": "", "texto": "", "categoria": ""}
 			for title in row["titulo"]:
 				new_row["titulo"] += remove_accents(cleantitle(cleanhtml(title)))
 			for text in row["texto"]:
 				new_row["texto"] += remove_accents(cleanhtml(text))
+			
+			new_row["categoria"] = row["categoria"]
+			new_row["dia"] = row["dia"]
 
 			new_data.append(new_row)
 

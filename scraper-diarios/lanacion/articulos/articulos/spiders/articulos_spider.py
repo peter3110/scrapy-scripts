@@ -63,7 +63,6 @@ class QuotesSpider(scrapy.Spider):
                 url = self.start_urls[9],
                 callback = lambda r: self.parse(r, re.split('/', self.start_urls[9])[-1])
             )
-                
 
     def parse(self, response, cat):
 
